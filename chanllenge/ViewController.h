@@ -7,7 +7,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class MyCell;
+
 @interface ViewController : UIViewController
+
+@property(nonatomic,assign) int currentIndex;
+@property(nonatomic,strong) NSArray *dataArray;
+
+-(void)loadData;
 
 
 @end

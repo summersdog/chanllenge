@@ -16,6 +16,12 @@
 		301E83EB25FDF34100E5BEEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 301E83EA25FDF34100E5BEEB /* main.m */; };
 		301E83F525FDF34200E5BEEB /* chanllengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 301E83F425FDF34200E5BEEB /* chanllengeTests.m */; };
 		301E840025FDF34200E5BEEB /* chanllengeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 301E83FF25FDF34200E5BEEB /* chanllengeUITests.m */; };
+		30604BD0262DA4FA0091ED15 /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30604BCF262DA4FA0091ED15 /* MyCell.m */; };
+		30604BE3262DDF800091ED15 /* MyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30604BE2262DDF800091ED15 /* MyLabel.m */; };
+		30604BEB262DE2230091ED15 /* bottomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30604BEA262DE2230091ED15 /* bottomCell.xib */; };
+		30D36395262983B3009D18B0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 30D36394262983B3009D18B0 /* README.md */; };
+		30D3639C26298938009D18B0 /* avatars in Resources */ = {isa = PBXBuildFile; fileRef = 30D3639A26298938009D18B0 /* avatars */; };
+		30D3639D26298938009D18B0 /* contacts.json in Resources */ = {isa = PBXBuildFile; fileRef = 30D3639B26298938009D18B0 /* contacts.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +60,14 @@
 		301E83FB25FDF34200E5BEEB /* chanllengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chanllengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		301E83FF25FDF34200E5BEEB /* chanllengeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = chanllengeUITests.m; sourceTree = "<group>"; };
 		301E840125FDF34200E5BEEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30604BCE262DA4FA0091ED15 /* MyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCell.h; sourceTree = "<group>"; };
+		30604BCF262DA4FA0091ED15 /* MyCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCell.m; sourceTree = "<group>"; };
+		30604BE1262DDF800091ED15 /* MyLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyLabel.h; sourceTree = "<group>"; };
+		30604BE2262DDF800091ED15 /* MyLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLabel.m; sourceTree = "<group>"; };
+		30604BEA262DE2230091ED15 /* bottomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = bottomCell.xib; sourceTree = "<group>"; };
+		30D36394262983B3009D18B0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		30D3639A26298938009D18B0 /* avatars */ = {isa = PBXFileReference; lastKnownFileType = folder; path = avatars; sourceTree = "<group>"; };
+		30D3639B26298938009D18B0 /* contacts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = contacts.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +98,7 @@
 		301E83CC25FDF33B00E5BEEB = {
 			isa = PBXGroup;
 			children = (
+				30D36394262983B3009D18B0 /* README.md */,
 				301E83D725FDF33B00E5BEEB /* chanllenge */,
 				301E83F325FDF34200E5BEEB /* chanllengeTests */,
 				301E83FE25FDF34200E5BEEB /* chanllengeUITests */,
@@ -104,6 +119,7 @@
 		301E83D725FDF33B00E5BEEB /* chanllenge */ = {
 			isa = PBXGroup;
 			children = (
+				30D3639926298863009D18B0 /* Resource */,
 				301E83D825FDF33B00E5BEEB /* AppDelegate.h */,
 				301E83D925FDF33B00E5BEEB /* AppDelegate.m */,
 				301E83DB25FDF33B00E5BEEB /* SceneDelegate.h */,
@@ -115,6 +131,11 @@
 				301E83E625FDF34100E5BEEB /* LaunchScreen.storyboard */,
 				301E83E925FDF34100E5BEEB /* Info.plist */,
 				301E83EA25FDF34100E5BEEB /* main.m */,
+				30604BCE262DA4FA0091ED15 /* MyCell.h */,
+				30604BCF262DA4FA0091ED15 /* MyCell.m */,
+				30604BEA262DE2230091ED15 /* bottomCell.xib */,
+				30604BE1262DDF800091ED15 /* MyLabel.h */,
+				30604BE2262DDF800091ED15 /* MyLabel.m */,
 			);
 			path = chanllenge;
 			sourceTree = "<group>";
@@ -135,6 +156,15 @@
 				301E840125FDF34200E5BEEB /* Info.plist */,
 			);
 			path = chanllengeUITests;
+			sourceTree = "<group>";
+		};
+		30D3639926298863009D18B0 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				30D3639A26298938009D18B0 /* avatars */,
+				30D3639B26298938009D18B0 /* contacts.json */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,8 +269,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30D3639C26298938009D18B0 /* avatars in Resources */,
 				301E83E825FDF34100E5BEEB /* LaunchScreen.storyboard in Resources */,
 				301E83E525FDF34100E5BEEB /* Assets.xcassets in Resources */,
+				30D36395262983B3009D18B0 /* README.md in Resources */,
+				30604BEB262DE2230091ED15 /* bottomCell.xib in Resources */,
+				30D3639D26298938009D18B0 /* contacts.json in Resources */,
 				301E83E325FDF33B00E5BEEB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,9 +300,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30604BE3262DDF800091ED15 /* MyLabel.m in Sources */,
 				301E83E025FDF33B00E5BEEB /* ViewController.m in Sources */,
 				301E83DA25FDF33B00E5BEEB /* AppDelegate.m in Sources */,
 				301E83EB25FDF34100E5BEEB /* main.m in Sources */,
+				30604BD0262DA4FA0091ED15 /* MyCell.m in Sources */,
 				301E83DD25FDF33B00E5BEEB /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
