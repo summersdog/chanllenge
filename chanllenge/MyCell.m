@@ -6,7 +6,6 @@
 //
 
 #import "MyCell.h"
-#import "MyLabel.h"
 
 @interface MyCell()
 @property (weak, nonatomic) IBOutlet UILabel *lbName;
@@ -29,7 +28,7 @@
     // Configure the view for the selected state
 }
 
--(void)setData:(NSArray *)data andIndex:(int)index{
+-(void)setData:(NSArray *)data andIndex:(NSInteger)index{
     NSMutableAttributedString *first_name = [[NSMutableAttributedString alloc]initWithString:data[index][@"first_name"]];
     NSMutableAttributedString *last_name = [[NSMutableAttributedString alloc]initWithString:data[index][@"last_name"]];
 

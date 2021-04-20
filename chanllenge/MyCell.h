@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MyCell : UITableViewCell
 
--(void)setData:(NSArray *)data andIndex:(int)index;
+-(void)setData:(NSArray *)data andIndex:(NSInteger)index;
 
 @end
 

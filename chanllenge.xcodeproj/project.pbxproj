@@ -17,8 +17,9 @@
 		301E83F525FDF34200E5BEEB /* chanllengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 301E83F425FDF34200E5BEEB /* chanllengeTests.m */; };
 		301E840025FDF34200E5BEEB /* chanllengeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 301E83FF25FDF34200E5BEEB /* chanllengeUITests.m */; };
 		30604BD0262DA4FA0091ED15 /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30604BCF262DA4FA0091ED15 /* MyCell.m */; };
-		30604BE3262DDF800091ED15 /* MyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30604BE2262DDF800091ED15 /* MyLabel.m */; };
 		30604BEB262DE2230091ED15 /* bottomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30604BEA262DE2230091ED15 /* bottomCell.xib */; };
+		30604C1B262F30F00091ED15 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30604C19262F30F00091ED15 /* CollectionViewCell.m */; };
+		30604C1C262F30F00091ED15 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30604C1A262F30F00091ED15 /* CollectionViewCell.xib */; };
 		30D36395262983B3009D18B0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 30D36394262983B3009D18B0 /* README.md */; };
 		30D3639C26298938009D18B0 /* avatars in Resources */ = {isa = PBXBuildFile; fileRef = 30D3639A26298938009D18B0 /* avatars */; };
 		30D3639D26298938009D18B0 /* contacts.json in Resources */ = {isa = PBXBuildFile; fileRef = 30D3639B26298938009D18B0 /* contacts.json */; };
@@ -62,9 +63,10 @@
 		301E840125FDF34200E5BEEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30604BCE262DA4FA0091ED15 /* MyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCell.h; sourceTree = "<group>"; };
 		30604BCF262DA4FA0091ED15 /* MyCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCell.m; sourceTree = "<group>"; };
-		30604BE1262DDF800091ED15 /* MyLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyLabel.h; sourceTree = "<group>"; };
-		30604BE2262DDF800091ED15 /* MyLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLabel.m; sourceTree = "<group>"; };
 		30604BEA262DE2230091ED15 /* bottomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = bottomCell.xib; sourceTree = "<group>"; };
+		30604C18262F30F00091ED15 /* CollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		30604C19262F30F00091ED15 /* CollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		30604C1A262F30F00091ED15 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		30D36394262983B3009D18B0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		30D3639A26298938009D18B0 /* avatars */ = {isa = PBXFileReference; lastKnownFileType = folder; path = avatars; sourceTree = "<group>"; };
 		30D3639B26298938009D18B0 /* contacts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = contacts.json; sourceTree = "<group>"; };
@@ -134,8 +136,9 @@
 				30604BCE262DA4FA0091ED15 /* MyCell.h */,
 				30604BCF262DA4FA0091ED15 /* MyCell.m */,
 				30604BEA262DE2230091ED15 /* bottomCell.xib */,
-				30604BE1262DDF800091ED15 /* MyLabel.h */,
-				30604BE2262DDF800091ED15 /* MyLabel.m */,
+				30604C18262F30F00091ED15 /* CollectionViewCell.h */,
+				30604C19262F30F00091ED15 /* CollectionViewCell.m */,
+				30604C1A262F30F00091ED15 /* CollectionViewCell.xib */,
 			);
 			path = chanllenge;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				30D36395262983B3009D18B0 /* README.md in Resources */,
 				30604BEB262DE2230091ED15 /* bottomCell.xib in Resources */,
 				30D3639D26298938009D18B0 /* contacts.json in Resources */,
+				30604C1C262F30F00091ED15 /* CollectionViewCell.xib in Resources */,
 				301E83E325FDF33B00E5BEEB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,7 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30604BE3262DDF800091ED15 /* MyLabel.m in Sources */,
+				30604C1B262F30F00091ED15 /* CollectionViewCell.m in Sources */,
 				301E83E025FDF33B00E5BEEB /* ViewController.m in Sources */,
 				301E83DA25FDF33B00E5BEEB /* AppDelegate.m in Sources */,
 				301E83EB25FDF34100E5BEEB /* main.m in Sources */,

@@ -7,9 +7,11 @@
 
 #import "ViewController.h"
 #import "MyCell.h"
+#import "CollectionViewCell.h"
 
-@interface ViewController () <UITableViewDataSource,UITableViewDelegate>
+@interface ViewController () <UITableViewDataSource,UITableViewDelegate,UICollectionViewDataSource,UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 
 @end
@@ -25,7 +27,8 @@ static NSString *reuseId = @"bottomCell";
     [self setUpView];
     //载入json数据
     [self loadData];
-    _currentIndex=0;
+    
+    
     
     
 }
@@ -36,10 +39,21 @@ static NSString *reuseId = @"bottomCell";
     
 }
 - (void)setUpView{
+    //设置代理 数据源
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
+    self.collectionView.delegate=self;
+    self.collectionView.dataSource = self;
+    
+    //设置显示风格
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.allowsSelection = NO;
+    //去掉末尾的横线
+    self.tableView.tableFooterView = [UIView new];
+    self.currentIndex=0;
+    
+    [self.collectionView registerNib:[UINib nibWithNibName:@"CollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"topCell"];
     
 }
 
@@ -98,6 +112,34 @@ static NSString *reuseId = @"bottomCell";
         
     });
 }
+
+
+
+
+- (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    //获取cell
+    CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"topCell" forIndexPath:indexPath];
+    if(cell==nil){
+    cell = [[NSBundle mainBundle] loadNibNamed:@"CollectionViewCell" owner:nil options:nil][0];
+    }
+    
+    //设置cell内容
+    [cell setCellWithData:_dataArray andIndexPath:indexPath];
+    
+    
+    //返回cell
+    return cell;
+}
+
+- (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return _dataArray.count;
+    
+}
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return 1;
+}
+
 
 
 @end
