@@ -11,10 +11,12 @@
 
 @interface ViewController : UIViewController
 
-@property(nonatomic,assign) int currentIndex;
+@property(nonatomic,assign) NSInteger currentIndex;
 @property(nonatomic,strong) NSArray *dataArray;
+@property(nonatomic,assign) CGFloat widithHeightRatio;
 
 -(void)loadData;
+//-(void)matchScrollView:(UIScrollView *)first toScrollView:(UIScrollView *)second;
 
 
 @end
