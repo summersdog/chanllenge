@@ -184,10 +184,11 @@ static NSString *reuseId = @"bottomCell";
 
 //选中居中
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    
-    collectionView.allowsSelection=NO;
+    //先选中当前的
+    [collectionView selectItemAtIndexPath:[NSIndexPath indexPathForItem:_currentIndex inSection:0] animated:NO scrollPosition:UICollectionViewScrollPositionNone];
+//    collectionView.allowsSelection=NO;
     [collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
-    collectionView.allowsSelection=YES;
+//    collectionView.allowsSelection=YES;
 //    [collectionView selectItemAtIndexPath:indexPath animated:UICollectionViewScrollPositionNone scrollPosition:NO];
 
 //    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:indexPath.item inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
