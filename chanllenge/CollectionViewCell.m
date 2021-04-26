@@ -18,20 +18,19 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
-    //设置选中样式
-//    UIView *backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 90, 90)];
-//    backgroundView.layer.cornerRadius = backgroundView.frame.size.width/2;
-//    backgroundView.backgroundColor = [UIColor blueColor];
-//    self.backgroundView = backgroundView;
-//    NSInteger screenWidth = [UIScreen mainScreen].bounds.size.width;
-    UIView *_selectedBackgroundView = [[UIView alloc]initWithFrame:self.frame];
+    //设置背景样式
+    NSInteger size = [UIScreen mainScreen].bounds.size.width/5.0f;
+    CGSizeMake(size-10, size-10);
+    CGRect bgFrame = self.frame;
+    bgFrame.size = CGSizeMake(size-10, size-10);
+    UIView *_selectedBackgroundView = [[UIView alloc]initWithFrame:bgFrame];
     _selectedBackgroundView.backgroundColor = [UIColor systemBlueColor];
     _selectedBackgroundView.layer.cornerRadius = _selectedBackgroundView.frame.size.height/2;
     
     self.selectedBackgroundView = _selectedBackgroundView;
-    
-    self.imAvatar.center =CGPointMake(self.frame.size.width/2, self.frame.size.width/2);
+    CGPoint center = self.selectedBackgroundView.center;
+    center = [self convertPoint:center toView:self.imAvatar];
+    self.imAvatar.center =center;
     
 }
 

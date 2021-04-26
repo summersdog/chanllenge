@@ -41,9 +41,11 @@ static NSString *reuseId = @"bottomCell";
 -(void)loadData{
     NSData *data = [[NSData alloc] initWithContentsOfFile:@"/Users/baiyuying/xcode_codes/chanllenge/chanllenge/Resource/contacts.json"];
     self.dataArray = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-    NSInteger size = [UIScreen mainScreen].bounds.size.width/5.0f;
     
-    CGFloat coWidth = (size-6);
+    
+    NSInteger size = [UIScreen mainScreen].bounds.size.width*0.2-10;
+//    NSInteger size = self.collectionView.contentSize.width;
+    CGFloat coWidth = size+5;
     CGFloat taHeight = self.tableView.bounds.size.height;
     CGFloat MyMidthHeightRatio = coWidth/taHeight;
     [self setWidithHeightRatio:MyMidthHeightRatio];
@@ -104,7 +106,7 @@ static NSString *reuseId = @"bottomCell";
 //实现滑动切换的动画效果，通过代理，判断滑动的长度是否超过100
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
     if ([scrollView isEqual:self.collectionView]) {
-        [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.collectionView.indexPathsForSelectedItems.firstObject.item inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+//        [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.collectionView.indexPathsForSelectedItems.firstObject.item inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
     }else{
         dispatch_async(dispatch_get_main_queue(), ^{
             //获取滑动结束位置的坐标
@@ -124,7 +126,7 @@ static NSString *reuseId = @"bottomCell";
                                 options:UIViewAnimationOptionCurveEaseOut animations:^{
                                     //UITableView滑动到指定cell
                                     [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.currentIndex inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
-                [self.collectionView selectItemAtIndexPath:[NSIndexPath indexPathForItem:self.currentIndex inSection:0] animated:YES scrollPosition:UICollectionViewScrollPositionCenteredHorizontally];
+//                [self.collectionView selectItemAtIndexPath:[NSIndexPath indexPathForItem:self.currentIndex inSection:0] animated:YES scrollPosition:UICollectionViewScrollPositionCenteredHorizontally];
                                 } completion:^(BOOL finished) {
                                     //UITableView可以响应其他滑动手势
                                     scrollView.panGestureRecognizer.enabled = YES;
@@ -173,8 +175,11 @@ static NSString *reuseId = @"bottomCell";
 
 //填补开头和末尾的空隙
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
-    return UIEdgeInsetsMake(0, self.collectionView.bounds.size.width*2/5, 0, self.collectionView.bounds.size.width*2/5);
+    CGFloat size = [UIScreen mainScreen].bounds.size.width*0.2-10;
+    return UIEdgeInsetsMake(0, self.collectionView.bounds.size.width*0.5-size*0.5, 0, self.collectionView.bounds.size.width*0.5-size*0.5);
 }
+
+
 
 
 //选中居中
@@ -182,10 +187,10 @@ static NSString *reuseId = @"bottomCell";
     
     collectionView.allowsSelection=NO;
     [collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
-//    collectionView.allowsSelection=YES;
-    [collectionView selectItemAtIndexPath:indexPath animated:UICollectionViewScrollPositionNone scrollPosition:NO];
+    collectionView.allowsSelection=YES;
+//    [collectionView selectItemAtIndexPath:indexPath animated:UICollectionViewScrollPositionNone scrollPosition:NO];
 
-    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:indexPath.item inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+//    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:indexPath.item inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
     self.currentIndex = indexPath.row;
 
 }
@@ -212,22 +217,22 @@ static NSString *reuseId = @"bottomCell";
         CGPoint center = self.collectionView.center;
         center = [self.view convertPoint:center toView:self.collectionView];
         NSIndexPath *centerIndexPath= [self.collectionView indexPathForItemAtPoint:center];
-        NSLog(@"center(%f,%f) index(%ld)",center.x,center.y,centerIndexPath.item);
+//        NSLog(@"center(%f,%f) index(%ld)",center.x,center.y,centerIndexPath.item);
         self.currentIndex = centerIndexPath.item;
         [self.collectionView selectItemAtIndexPath:centerIndexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
         
-//        CGPoint offset = scrollView.contentOffset;
-//        CGFloat heightOffset = offset.x/self.widithHeightRatio;
-//
-//        [self.tableView setContentOffset:CGPointMake(0, heightOffset)];
+        CGPoint offset = scrollView.contentOffset;
+        CGFloat heightOffset = offset.x/self.widithHeightRatio;
+
+        [self.tableView setContentOffset:CGPointMake(0, heightOffset)];
         
 //        [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.currentIndex inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
         
     }else{
-//        CGPoint offset = scrollView.contentOffset;
-//        CGFloat widthOffset = offset.y*self.widithHeightRatio;
-//
-//        [self.collectionView setContentOffset:CGPointMake(widthOffset, 0)];
+        CGPoint offset = scrollView.contentOffset;
+        CGFloat widthOffset = offset.y*self.widithHeightRatio;
+
+        [self.collectionView setContentOffset:CGPointMake(widthOffset, 0)];
     }
 //        [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.currentIndex inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
 

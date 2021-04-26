@@ -42,7 +42,7 @@
 NSArray *arr = [super layoutAttributesForElementsInRect:rect];计算结束时，离得最近的偏移量，再偏移过去；
 15. 选中效果目前使用的是设置选中背景颜色和形状，如何在滚动时有选中切换的效果呢？
 16. plist是啥？
-17. 各种UIView控件的size的确定；
+17. 各种UIView控件的size的确定，以及多个文件中需要获取某个控件的size的时候怎么做；
 18. 同步的实现和选中效果的实现；
 
 
@@ -62,9 +62,13 @@ NSArray *arr = [super layoutAttributesForElementsInRect:rect];计算结束时，
 6. 选中居中通过collectionview的代理方法进行实现；
 7. 设置圆形，View.layer.conerRadius
 8. 有center方法可以获取view的中点，有convert方法可以更换坐标系；
+9. cell的size的设置顺序是，先是每个cell从nib文件中读取，所以在自定义cell文件中获取的size大小是nib文件中的设置，之后才是通过layout文件中的代码设置，最后才是通过delegate进行设置；
 
 ## 与要求不同的
 1. 在滑动上方collectionview的时候无法同时滑动，同步是在事件完成之后完成的，完成滑动的时间不一致；
-2. 应该与1.是相同的原因，导致了滑动过程中的选中无法按次序切换；尝试了在didscroll代理方法中进行中间的选中，会导致点击的时候出现闪烁的现象；
+- 已解决
+2. 点击的时候出现闪烁的现象；
+
 3. 有一种方式是计算上下滑动距离的比例，然后将偏移量给下面的；问题在于，如何在控制器🥱中得到各自view的滑动距离？计算得到正确的比例？
+- 这种方法可行，需要注意的是计算正确每个位置的size大小；
 

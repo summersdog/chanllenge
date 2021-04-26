@@ -12,9 +12,11 @@
 - (void)prepareLayout{
     [super prepareLayout];
     //此处的size应该计算
-    self.minimumInteritemSpacing = 0;
+    
+    self.minimumLineSpacing = 5;
+    self.minimumInteritemSpacing = 5;
     NSInteger size = [UIScreen mainScreen].bounds.size.width/5.0f;
-    self.itemSize = CGSizeMake(size-6, size-6);
+    self.itemSize = CGSizeMake(size-10, size-10);
     self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     
     self.collectionView.scrollEnabled=YES;
@@ -66,7 +68,7 @@
         }
     }
     
-    [self.collectionView selectItemAtIndexPath:stopIndexPath animated:YES scrollPosition:UICollectionViewScrollPositionCenteredHorizontally];
+//    [self.collectionView selectItemAtIndexPath:stopIndexPath animated:YES scrollPosition:UICollectionViewScrollPositionCenteredHorizontally];
     
     // 修改原有的偏移量
     proposedContentOffset.x += minSpace;
