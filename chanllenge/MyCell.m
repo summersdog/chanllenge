@@ -36,8 +36,8 @@
     
     [first_name appendAttributedString:[[NSMutableAttributedString alloc]initWithString:@" "]];
     [first_name appendAttributedString:last_name];
-    _lbName.attributedText = first_name;
     
+    _lbName.attributedText = first_name;
     _lbTitle.text = data[index][@"title"];
     _tvIntroduction.text = data[index][@"introduction"];
     

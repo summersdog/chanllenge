@@ -14,14 +14,14 @@
     //此处的size应该计算
     
     self.minimumLineSpacing = 5;
-    self.minimumInteritemSpacing = 5;
+//    self.minimumInteritemSpacing = 5;
     NSInteger size = [UIScreen mainScreen].bounds.size.width/5.0f;
     self.itemSize = CGSizeMake(size-10, size-10);
     self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     
     self.collectionView.scrollEnabled=YES;
     self.collectionView.allowsSelection=YES;
-    
+//    self.collectionView.automaticallyAdjustsScrollIndicatorInsets =NO;
 //    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
     
 
