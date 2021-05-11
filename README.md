@@ -72,7 +72,7 @@ NSArray *arr = [super layoutAttributesForElementsInRect:rect];计算结束时，
 9. cell的size的设置顺序是，先是每个cell从nib文件中读取，所以在自定义cell文件中获取的size大小是nib文件中的设置，之后才是通过layout文件中的代码设置，最后才是通过delegate进行设置；
 10. navigatorbar的高度无法调整，stackoverflow上的推荐做法是填充一个空白的view
 11. 右侧的白边问题，是通过storyboard直接拖拽的collectionview的大小问题，在viewdidload里面重新设置了collectionview的大小即可。
-- 
+12. image的管理问题，如果是放在本地使用绝对路径，不太好且无法进行xcode往git上的push，因此使用xcassets的方式进行image的存储；
 
 ## 与要求不同的
 1. 在滑动上方collectionview的时候无法同时滑动，同步是在事件完成之后完成的，完成滑动的时间不一致；
