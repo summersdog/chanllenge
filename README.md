@@ -10,6 +10,8 @@
 1. block frame bounds sender selector notifier、协议 即oc语法问题；
 - frame和bounds都是用来描述视图大小和位置的，不同的是两者的坐标系不同，frame使用的是父视图的坐标系，而bounds则是本地视图；
 - protocol，类似于接口？
+- SEL是用于存储对象方法-()的地址的数据类型，可以理解为函数指针？取地址使用@selector
+- block是用于存储匿名函数的数据类型；
 2. 各种view控件的问题例如UItableview collectionview UIScrollview使用方法；
 - 基本上视图的外观设置通过xib和新创建的类来控制；有关数据的问题，通过datasource协议方法来处理；与交互相关的，比如滚动选中等等通过代理方法来处理；
 3. 文档的安装；
@@ -77,7 +79,6 @@ NSArray *arr = [super layoutAttributesForElementsInRect:rect];计算结束时，
 - 已解决
 2. 点击的时候出现闪烁的现象；
 - 已解决，先选中当前的item，之后滑动过去，通过滚动代理来进行目标的选中；
-
 3. 有一种方式是计算上下滑动距离的比例，然后将偏移量给下面的；问题在于，如何在控制器中得到各自view的滑动距离？计算得到正确的比例？
 - 这种方法可行，需要注意的是计算正确每个位置的size大小；
 
