@@ -38,6 +38,6 @@
 -(void)setCellWithData:(NSArray *)data andIndexPath:(NSIndexPath *)indexPath{
     
     NSString *imgName = [data[indexPath.row][@"avatar_filename"] componentsSeparatedByString:@"."][0];
-    self.imAvatar.image = [UIImage imageNamed:imgName inBundle:[NSBundle bundleWithPath:@"/Users/baiyuying/xcode_codes/chanllenge/chanllenge/Resource/avatars"] withConfiguration:nil];
+    self.imAvatar.image = [UIImage imageNamed:imgName inBundle:[NSBundle bundleWithPath:@"/Users/baiyuying/xcode_codes/chanllenge/chanllenge/Resource"] withConfiguration:nil];
 }
 @end
