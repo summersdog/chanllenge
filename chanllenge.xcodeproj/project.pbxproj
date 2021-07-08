@@ -16,7 +16,7 @@
 		301E83EB25FDF34100E5BEEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 301E83EA25FDF34100E5BEEB /* main.m */; };
 		301E83F525FDF34200E5BEEB /* chanllengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 301E83F425FDF34200E5BEEB /* chanllengeTests.m */; };
 		301E840025FDF34200E5BEEB /* chanllengeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 301E83FF25FDF34200E5BEEB /* chanllengeUITests.m */; };
-		30604BD0262DA4FA0091ED15 /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30604BCF262DA4FA0091ED15 /* MyCell.m */; };
+		30604BD0262DA4FA0091ED15 /* tableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30604BCF262DA4FA0091ED15 /* tableViewCell.m */; };
 		30604BEB262DE2230091ED15 /* bottomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30604BEA262DE2230091ED15 /* bottomCell.xib */; };
 		30604C1B262F30F00091ED15 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30604C19262F30F00091ED15 /* CollectionViewCell.m */; };
 		30604C1C262F30F00091ED15 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30604C1A262F30F00091ED15 /* CollectionViewCell.xib */; };
@@ -61,8 +61,8 @@
 		301E83FB25FDF34200E5BEEB /* chanllengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chanllengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		301E83FF25FDF34200E5BEEB /* chanllengeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = chanllengeUITests.m; sourceTree = "<group>"; };
 		301E840125FDF34200E5BEEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		30604BCE262DA4FA0091ED15 /* MyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCell.h; sourceTree = "<group>"; };
-		30604BCF262DA4FA0091ED15 /* MyCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCell.m; sourceTree = "<group>"; };
+		30604BCE262DA4FA0091ED15 /* tableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tableViewCell.h; sourceTree = "<group>"; };
+		30604BCF262DA4FA0091ED15 /* tableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tableViewCell.m; sourceTree = "<group>"; };
 		30604BEA262DE2230091ED15 /* bottomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = bottomCell.xib; sourceTree = "<group>"; };
 		30604C18262F30F00091ED15 /* CollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		30604C19262F30F00091ED15 /* CollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
@@ -134,8 +134,8 @@
 				301E83E625FDF34100E5BEEB /* LaunchScreen.storyboard */,
 				301E83E925FDF34100E5BEEB /* Info.plist */,
 				301E83EA25FDF34100E5BEEB /* main.m */,
-				30604BCE262DA4FA0091ED15 /* MyCell.h */,
-				30604BCF262DA4FA0091ED15 /* MyCell.m */,
+				30604BCE262DA4FA0091ED15 /* tableViewCell.h */,
+				30604BCF262DA4FA0091ED15 /* tableViewCell.m */,
 				30604BEA262DE2230091ED15 /* bottomCell.xib */,
 				30604C18262F30F00091ED15 /* CollectionViewCell.h */,
 				30604C19262F30F00091ED15 /* CollectionViewCell.m */,
@@ -310,7 +310,7 @@
 				301E83DA25FDF33B00E5BEEB /* AppDelegate.m in Sources */,
 				301E83EB25FDF34100E5BEEB /* main.m in Sources */,
 				30604C32263019650091ED15 /* HorizontalLinearLayout.m in Sources */,
-				30604BD0262DA4FA0091ED15 /* MyCell.m in Sources */,
+				30604BD0262DA4FA0091ED15 /* tableViewCell.m in Sources */,
 				301E83DD25FDF33B00E5BEEB /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

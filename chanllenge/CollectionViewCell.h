@@ -13,7 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 //设置cell内容
 -(void)setCellWithData:(NSArray *)data andIndexPath:(NSIndexPath *)indexPath;
-//+(instancetype)getCellWithCollectionView:(UICollectionView *)collectionView and
 
 @end
 
